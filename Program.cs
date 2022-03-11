@@ -71,6 +71,35 @@ namespace EmployeeWages
             }
         }
 
+        public static void UC4()
+        {
+            Console.WriteLine("Wlcome to UC_4");
+            int isFullTime = 1;
+            int isPartTime = 2;
+            int totalWorkingHour, wagePerHour = 20, totalWage = 0;
+
+            Random random = new Random();
+            int randomCheck = random.Next(0, 3);
+            switch (randomCheck)
+            {
+                case 1:
+                    totalWorkingHour = 8;
+                    Console.WriteLine("Employee is Present");
+                    break;
+                case 2:
+                    totalWorkingHour = 4;
+                    Console.WriteLine("Employee is doing parttime:");
+                    break;
+                default:
+                    totalWorkingHour = 0;
+                    Console.WriteLine("Employee is absent");
+                    break;
+            }
+            totalWage = wagePerHour * totalWorkingHour;
+            Console.WriteLine("Total wage is: " + totalWage);
+
+        }
+
 
         static void Main(string[] args)
         {
@@ -78,6 +107,7 @@ namespace EmployeeWages
             Program.UC1();
             Program.UC2();
             Program.UC3();
+            Program.UC4();
         }
     }
 }
