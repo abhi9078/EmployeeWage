@@ -42,12 +42,42 @@ namespace EmployeeWages
 
         }
 
+        public static void UC3()
+        {
+            Console.WriteLine("Wlcome to UC_3");
+            int totalWorkingHour = 8;
+            int partTimeHour = 4;
+            int wagePerHour = 20;
+            int dailyWage = 0;
+            Random random = new Random();
+            int num = random.Next(0, 3);
+            if (num == 0)
+            {
+                Console.WriteLine("Empoloyee is Present");
+                dailyWage = totalWorkingHour * wagePerHour;
+                Console.WriteLine("Total Daily wage is: " + dailyWage);
+            }
+            else if (num == 1)
+            {
+                Console.WriteLine("Employee is doing Parttime");
+                dailyWage = partTimeHour * wagePerHour;
+                Console.WriteLine("Total Daily wage is: " + dailyWage);
+            }
+            else
+            {
+                Console.WriteLine("Employee is Absent");
+                Console.WriteLine("Total Daily wage is: " + dailyWage);
+
+            }
+        }
+
 
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, Welcome to Employeewages problem ");
             Program.UC1();
             Program.UC2();
+            Program.UC3();
         }
     }
 }
