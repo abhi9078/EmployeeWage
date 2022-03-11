@@ -137,6 +137,44 @@ namespace EmployeeWages
 
         }
 
+        public static void UC6()
+        {
+            Console.WriteLine("Wlcome to UC_6");
+            int isFullTime = 1;
+            int isPartTime = 2;
+            int totalWorkingHour = 0, wagePerHour = 20, totalWage = 0;
+            int totalWorkingDay = 1, empHrs;
+            int totalWorkingLimit = 100;
+
+
+            while (totalWorkingDay <= 20 && totalWorkingHour <= totalWorkingLimit)
+            {
+                Random random = new Random();
+                int randomCheck = random.Next(0, 3);
+
+                switch (randomCheck)
+                {
+                    case 1:
+                        empHrs = 8;
+                        Console.WriteLine("Employee is Present");
+                        break;
+                    case 2:
+                        empHrs = 4;
+                        Console.WriteLine("Employee is doing parttime:");
+                        break;
+                    default:
+                        empHrs = 0;
+                        Console.WriteLine("Employee is absent");
+                        break;
+                }
+                totalWorkingDay++;
+                totalWorkingHour = totalWorkingHour + empHrs;
+            }
+            totalWage = wagePerHour * totalWorkingHour;
+            Console.WriteLine("Total wage is: " + totalWage);
+
+        }
+
 
         static void Main(string[] args)
         {
@@ -146,6 +184,7 @@ namespace EmployeeWages
             Program.UC3();
             Program.UC4();
             Program.UC5();
+            Program.UC6();
         }
     }
 }
