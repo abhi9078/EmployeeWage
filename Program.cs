@@ -185,8 +185,27 @@ namespace EmployeeWages
              Program.UC3();
              Program.UC4();
              Program.UC5();
-             Program.UC6();*/
-            UC_7.EmployeeWage();
+             Program.UC6();
+            UC_7.EmployeeWage();*/
+
+            //UC_8
+            Console.WriteLine("Hello, Welcome to total employee wage calculation program ");
+            Console.WriteLine("Please enter the number of Company: ");
+            int limit = int.Parse(Console.ReadLine()), i = 0;
+
+            while (i < limit)
+            {
+                i++;
+                Console.WriteLine("\nEnter Company Name: ");
+                string com = Console.ReadLine();
+                Console.WriteLine("Enter Employee rate per hour: ");
+                int sal = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Employee total working hour Limit: ");
+                int wlimt = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter TotalWorking days limit for your company: ");
+                int days = int.Parse(Console.ReadLine());
+                UC_8.EmployeeWage(com, sal, wlimt, days);
+            }
         }
     }
 }
