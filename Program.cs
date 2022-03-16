@@ -186,7 +186,7 @@ namespace EmployeeWages
              Program.UC4();
              Program.UC5();
              Program.UC6();
-            UC_7.EmployeeWage();*/
+            UC_7.EmployeeWage();
 
             //UC_8
             Console.WriteLine("Hello, Welcome to total employee wage calculation program ");
@@ -205,7 +205,14 @@ namespace EmployeeWages
                 Console.WriteLine("Enter TotalWorking days limit for your company: ");
                 int days = int.Parse(Console.ReadLine());
                 UC_8.EmployeeWage(com, sal, wlimt, days);
-            }
+            }*/
+
+            UC_9 obj = new UC_9("Dmart", 20,100,20);
+            obj.ComputeEmployeeWage();
+            Console.WriteLine(obj.toString());
+            UC_9 obj1 = new UC_9("RMart", 10, 120, 21);
+            obj1.ComputeEmployeeWage();
+            Console.WriteLine(obj1.toString());
         }
     }
 }
