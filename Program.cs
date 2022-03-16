@@ -4,6 +4,7 @@ namespace EmployeeWages
 {
     internal class Program
     {
+        /*
         public static void UC1()
         {
             Console.WriteLine("Wlcome to UC_1");
@@ -173,18 +174,19 @@ namespace EmployeeWages
             totalWage = wagePerHour * totalWorkingHour;
             Console.WriteLine("Total wage is: " + totalWage);
 
-        }
+        }*/
 
 
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, Welcome to Employeewages problem ");
-            Program.UC1();
-            Program.UC2();
-            Program.UC3();
-            Program.UC4();
-            Program.UC5();
-            Program.UC6();
+            /* Program.UC1();
+             Program.UC2();
+             Program.UC3();
+             Program.UC4();
+             Program.UC5();
+             Program.UC6();*/
+            UC_7.EmployeeWage();
         }
     }
 }
