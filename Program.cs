@@ -207,12 +207,17 @@ namespace EmployeeWages
                 UC_8.EmployeeWage(com, sal, wlimt, days);
             }*/
 
-            UC_9 obj = new UC_9("Dmart", 20,100,20);
-            obj.ComputeEmployeeWage();
-            Console.WriteLine(obj.toString());
-            UC_9 obj1 = new UC_9("RMart", 10, 120, 21);
-            obj1.ComputeEmployeeWage();
-            Console.WriteLine(obj1.toString());
+            //UC_9 obj = new UC_9("Dmart", 20,100,20);
+            //obj.ComputeEmployeeWage();
+            //Console.WriteLine(obj.toString());
+            //UC_9 obj1 = new UC_9("RMart", 10, 120, 21);
+            //obj1.ComputeEmployeeWage();
+            //Console.WriteLine(obj1.toString());
+
+            EmpWage empWage = new EmpWage();
+            empWage.addCompanyEmpwage("Dmart", 20, 100, 20);
+            empWage.addCompanyEmpwage("Tata", 20, 120, 23);
+            empWage.computeEmpWage();
         }
     }
 }
